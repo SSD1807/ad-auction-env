@@ -29,3 +29,37 @@ uvicorn api.main:app --reload
 ## Docker
 docker build -t ad-auction-env .
 docker run -p 7860:7860 ad-auction-env
+
+## 🧪 Example API Call
+
+### POST /step
+
+#### Request:
+```json
+{
+  "bid": 2.5
+}
+
+{
+  "reward": 1.23,
+  "done": false,
+  "info": {
+    "win": true,
+    "competitor_bid": 2.1
+  }
+}
+---
+
+### ⚠️ Important formatting tip
+Make sure:
+- triple backticks ``` are correct
+- json block is properly closed
+
+---
+
+# ✅ STEP 5 — Push README update
+
+```bash
+git add README.md
+git commit -m "Added API example"
+git push
