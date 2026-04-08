@@ -1,0 +1,35 @@
+name: ad-auction-env
+description: Simulation of ad auction and bid optimization using reinforcement learning
+
+version: 1.0
+
+entrypoints:
+  reset: /reset
+  step: /step
+  state: /state
+
+actions:
+  type: object
+  properties:
+    bid:
+      type: number
+      description: Bid value for auction
+
+observations:
+  type: object
+  properties:
+    budget:
+      type: number
+    ctr:
+      type: number
+    conv_rate:
+      type: number
+    timestep:
+      type: integer
+
+reward:
+  type: number
+  description: Return on Ad Spend (ROAS)
+
+tasks_endpoint: /tasks
+grader_endpoint: /grader
